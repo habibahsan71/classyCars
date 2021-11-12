@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className='bg-dark text-white mt-5'>
+        <div className='bg-dark text-white '>
 
 
             <footer className="bg-dark text-center text-lg-start text-white">
@@ -36,10 +36,10 @@ const Footer = () => {
                                     <a href="#!" className="text-white"><i className="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Supply</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white"><i className="fas fa-backspace fa-fw fa-sm me-2"></i>Foods</a>
+                                    <a href="#!" className="text-white"><i className="fas fa-backspace fa-fw fa-sm me-2"></i>Parts</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white"><i className="far fa-file-alt fa-fw fa-sm me-2"></i>Accomodation Services</a>
+                                    <a href="#!" className="text-white"><i className="far fa-file-alt fa-fw fa-sm me-2"></i>Engine Services</a>
                                 </li>
                                 <li>
                                     <a href="#!" className="text-white"><i className="far fa-file-alt fa-fw fa-sm me-2"></i>Privacy policy</a>
@@ -54,7 +54,7 @@ const Footer = () => {
 
                             <ul className="list-unstyled">
                                 <li>
-                                    <a href="#!" className="text-white">HBK Tour Services</a>
+                                    <a href="#!" className="text-white">HBK Super Cars</a>
                                 </li>
                                 <li>
                                     <a href="#!" className="text-white">123 Street</a>
@@ -73,10 +73,10 @@ const Footer = () => {
 
                             <ul className="list-unstyled">
                                 <li>
-                                    <a href="#!" className="text-white"><i className="fas fa-at fa-fw fa-sm me-2"></i>Help in admitting</a>
+                                    <a href="#!" className="text-white"><i className="fas fa-at fa-fw fa-sm me-2"></i>Help in Purchasing</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white"><i className="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Check the seat availability</a>
+                                    <a href="#!" className="text-white"><i className="fas fa-shipping-fast fa-fw fa-sm me-2"></i>Check the Car availability</a>
                                 </li>
                                 <li>
                                     <a href="#!" className="text-white"><i className="fas fa-envelope fa-fw fa-sm me-2"></i>Join the newsletter</a>
@@ -91,7 +91,7 @@ const Footer = () => {
 
 
                 <p className="text-center m-0 py-3 copyright">
-                    Copyright © All Reserved by HBK Tour Services
+                    Copyright © All Reserved by HBK Super Cars
                 </p>
 
             </footer>

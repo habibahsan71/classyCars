@@ -21,7 +21,7 @@ const MyOrder = () => {
         fetch('http://localhost:5000/AllOrder')
             .then((res) => res.json())
             .then((data) => setMyOrder(data));
-    }, []);
+    }, [user]);
 
 
 
@@ -45,7 +45,7 @@ const MyOrder = () => {
 
     }
 
-    const UserOrder = myOrder.filter(order => order.userEmail === user.email)
+    const UserOrder = myOrder?.filter(order => order.userEmail === user.email)
 
     const handleUpdateData = () => {
         const remainingOrder = myOrder.filter(order => order._id !== orderId);
@@ -71,7 +71,7 @@ const MyOrder = () => {
                     <img src={done2} alt="" />
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={props.onHide}>Done</Button>
+                    <Button onClick={props?.onHide}>Done</Button>
                 </Modal.Footer>
             </Modal>
         );
@@ -89,7 +89,7 @@ const MyOrder = () => {
 
             {
                 UserOrder.map(orderList => (
-                    <div className='all-order-div'>
+                    <div className='all-order-div' key={orderList._id}>
                         <div className='all-order-img'>
                             <img src={orderList.img} alt="" />
                         </div>
@@ -105,12 +105,6 @@ const MyOrder = () => {
 
                             <Button variant="danger" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { handleShow(orderList._id) }}>Delete Order
                             </Button>
-
-
-
-
-
-
 
 
                             <Modal show={show} onHide={handleClose} >
@@ -129,20 +123,12 @@ const MyOrder = () => {
                                     </Button>
                                 </Modal.Footer>
                             </Modal>
-
-
-
                             <>
                                 <MyVerticallyCenteredModal
                                     show={modalShow}
                                     onHide={() => { setModalShow(false); handleUpdateData() }}
                                 />
                             </>
-
-
-
-
-
                         </div>
                     </div>
                 ))

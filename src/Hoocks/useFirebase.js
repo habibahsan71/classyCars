@@ -105,7 +105,8 @@ const useFirebase = () => {
         handleEmailRegister,
         handleEmailLogin,
         updateUserProfile,
-        name
+        name,
+
 
     };
 

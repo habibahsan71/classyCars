@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 import useServices from '../../Hoocks/useServices';
+import ShowReview from '../Review/ShowReview';
 import Service from '../Service/Service';
 
 
@@ -31,6 +32,7 @@ const Home = () => {
                 </div>
                 <button onClick={GoServices} className='btn btn-outline-warning my-2'>Explore More</button>
             </div>
+            <ShowReview></ShowReview>
 
         </div>
     );

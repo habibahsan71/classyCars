@@ -13,7 +13,7 @@ import ManageAllOrder from './Pages/ManageAllOrder/ManageAllOrder';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import ManageServices from './Pages/ManageServices/ManageServices';
 import DashBoard from './Pages/DashBoard/DashBoard';
-import MakeAdmin from './Pages/Admin/MakeAdmin';
+
 import Footer from './Pages/Share/Footer/Footer';
 
 function App() {

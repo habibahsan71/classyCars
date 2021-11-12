@@ -23,7 +23,7 @@ const PlaceOrder = () => {
 
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = '/myorder' || location?.state?.from;
+    const redirect_uri = '/' || location?.state?.from;
 
 
 
@@ -60,9 +60,10 @@ const PlaceOrder = () => {
         else {
             axios.post('http://localhost:5000/AllOrder', orderData)
                 .then(res => {
-                    // console.log(res);
+                    console.log(res);
+                    alert('Order Placed')
                 })
-            // history.push(redirect_uri);
+            history.push(redirect_uri);
 
         }
     }

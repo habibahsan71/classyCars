@@ -9,13 +9,14 @@ const MakeAdmin = () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
         })
-            .then((res) => res.json())
-            .then((result) => console.log(result));
+            .then(res => res.json())
+            .then(result => console.log(result));
+        alert('Admin Added')
         console.log(data);
     };
     return (
         <div>
-            <h1>make admin</h1>
+            <h1>Make Admin</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                     className="input-field"
