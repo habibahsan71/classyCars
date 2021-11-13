@@ -4,7 +4,7 @@ const MakeAdmin = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        fetch("https://pacific-caverns-05949.herokuapp.com/makeAdmin", {
+        fetch("https://hbk-supercars.web.app/makeAdmin", {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -15,11 +15,11 @@ const MakeAdmin = () => {
         console.log(data);
     };
     return (
-        <div>
+        <div className='text-center mt-5'>
             <h1>Make Admin</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
-                    className="input-field"
+                    className="input-field w-75"
                     name="email"
                     placeholder="Email"
                     type="email"
@@ -30,7 +30,7 @@ const MakeAdmin = () => {
                 <input
                     className="submit-btn btn btn-danger mt-3"
                     type="submit"
-                    value="make as Admin"
+                    value="Add as a Admin"
                 />
             </form>
         </div>

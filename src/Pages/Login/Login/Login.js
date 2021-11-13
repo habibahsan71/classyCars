@@ -16,7 +16,7 @@ const Login = () => {
 
     const { signInWithGoogle, handleEmailLogin } = useAuth();
 
-
+    // const [name, setName] = useState({});
     const [email, setEmail] = useState({});
     const [password, setPassword] = useState({});
     const [message, setMessage] = useState('');
@@ -46,6 +46,10 @@ const Login = () => {
         setEmail(e.target.value);
 
     }
+    // const handleName = e => {
+    //     setName(e.target.value);
+
+    // }
 
     const handlePassword = e => {
         setPassword(e.target.value);

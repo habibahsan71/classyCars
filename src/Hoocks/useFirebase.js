@@ -49,7 +49,7 @@ const useFirebase = () => {
 
 
 
-    const updateUserProfile = (name) => {
+    const updateUserProfile = () => {
         updateProfile(auth.currentUser, {
             displayName: name
         }).then(() => {
@@ -82,7 +82,7 @@ const useFirebase = () => {
     }
 
     const hanldeUserInfoRegister = (email) => {
-        fetch("https://pacific-caverns-05949.herokuapp.com/addUserInfo", {
+        fetch("https://hbk-supercars.web.app/addUserInfo", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ email }),

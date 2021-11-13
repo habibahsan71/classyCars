@@ -1,7 +1,6 @@
 import React from 'react';
-import { useEffect } from 'react';
 import { useState } from 'react';
-import { Button, Modal, Spinner } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import './ManageAllOrder.css';
 import doneImg from '../../Images/done.gif';
 import useOrders from '../../Hoocks/useOrders';
@@ -27,7 +26,7 @@ const ManageAllOrder = () => {
 
 
     // useEffect(() => {
-    //     fetch(`https://pacific-caverns-05949.herokuapp.com/AllOrder`)
+    //     fetch(`https://hbk-supercars.web.app/AllOrder`)
     //         .then((res) => res.json())
     //         .then((data) => setAllOrder(data));
 
@@ -37,7 +36,7 @@ const ManageAllOrder = () => {
 
     //Delete User 
     const handleDeleteOrder = () => {
-        const url = `https://pacific-caverns-05949.herokuapp.com/AllOrder/${orderId}`;
+        const url = `https://hbk-supercars.web.app/AllOrder/${orderId}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -53,7 +52,7 @@ const ManageAllOrder = () => {
     }
 
     const handleUpdateStatus = (id) => {
-        const url = `https://pacific-caverns-05949.herokuapp.com/AllOrder/${id}`
+        const url = `https://hbk-supercars.web.app/AllOrder/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

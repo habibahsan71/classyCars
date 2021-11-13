@@ -1,5 +1,7 @@
 import React from 'react';
 import useReviews from '../../Hoocks/useReviews';
+import Rating from 'react-rating';
+import './review.css'
 
 const ShowReview = () => {
     const [reviews] = useReviews();
@@ -15,7 +17,11 @@ const ShowReview = () => {
                                 <div className="card-body text-center">
 
                                     <h5 className="card-title text-primary">{review.name}</h5>
-                                    <p className="card-title text-muted">{review.comments}</p>
+                                    <Rating emptySymbol="far fa-star color"
+                                        fullSymbol="fas fa-star color" initialRating={review.rating}
+                                        fractions={2} readonly></Rating>
+                                    <br />
+                                    <p className="card-title text-muted"><small>{review.comments}</small></p>
 
                                 </div>
 
@@ -29,3 +35,4 @@ const ShowReview = () => {
 };
 
 export default ShowReview;
+

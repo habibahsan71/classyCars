@@ -65,9 +65,6 @@ const Register = () => {
 
 
 
-
-
-
     return (
         <div className='container'>
 
@@ -95,8 +92,6 @@ const Register = () => {
             <div className="mb-3 form-check">
                 <p>Already have an account? <Link to='/login'>Log In</Link></p>
             </div>
-
-
 
             <button onClick={handleGoogleLogin} className="btn btn-warning">Google Sing In</button>
 

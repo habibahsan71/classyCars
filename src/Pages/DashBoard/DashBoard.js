@@ -12,11 +12,11 @@ import Review from '../Review/Review';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
-    const { user } = useAuth();
+    const { user, logOut } = useAuth();
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch(`https://pacific-caverns-05949.herokuapp.com/checkAdmin/${user?.email}`)
+        fetch(`https://hbk-supercars.web.app/checkAdmin/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data[0]?.role === "admin") {
@@ -44,9 +44,12 @@ const DashBoard = () => {
                                 <Link to={`${url}/payment`}>
                                     <h5 className=" ms- 3 text-white">Pay</h5>
                                 </Link>
-                                <Link to={`${url}/review`}>
-                                    <h5 className=" ms- 3 text-white">Review</h5>
-                                </Link>
+                                {
+                                    user?.email &&
+                                    <Link to={`${url}/review`}>
+                                        <h5 className=" ms- 3 text-white">Review</h5>
+                                    </Link>
+                                }
                                 {isAdmin && (
                                     <Link to={`${url}/manageallorder`}>
                                         <h5 className="ms- 3 text-white">Manage All Order</h5>
@@ -69,6 +72,11 @@ const DashBoard = () => {
                                     <Link to={`${url}/manageServices`}>
                                         <h5 className=" ms- 3 text-white">Manage Service</h5>
                                     </Link>
+                                )}
+                                {isAdmin && (
+
+                                    <button className='btn btn-outline-danger mb-5' onClick={logOut}>SignOut</button>
+
                                 )}
                             </div>
                         </div>
