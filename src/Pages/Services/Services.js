@@ -8,7 +8,7 @@ const Services = () => {
 
     return (
         <div className='container services-container'>
-            <h1>Our Services</h1>
+            <h1>Our Cult Classic Cars</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     services.map(service => <Service

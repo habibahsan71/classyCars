@@ -20,7 +20,7 @@ const Home = () => {
             <Banner></Banner>
             {/* <Services></Services> */}
             <div className='container services-container'>
-                <h1>Our Services</h1>
+                <h2>Have A Look At Our cars</h2>
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {
                         featuredServices.map(service => <Service

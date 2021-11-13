@@ -33,7 +33,7 @@ const DashBoard = () => {
         <div>
             <div className="dashboard-container ">
                 <div className="row">
-                    <div className="col-md-2 bg-secondary">
+                    <div className="col-md-2 bg-dark">
                         <div className="dashboard">
                             <h4 className='text-warning p-5'>Dashboard</h4>
                             <div className="text-center">

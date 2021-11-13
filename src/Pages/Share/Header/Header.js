@@ -17,7 +17,7 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto text-center ">
                             <Nav.Link as={Link} to="/home" className='text-white'>Home</Nav.Link>
-                            <Nav.Link as={Link} to="/services" className='text-white'>Services</Nav.Link>
+                            <Nav.Link as={Link} to="/services" className='text-white'>Explore More</Nav.Link>
 
                             {/* {
                                 user?.email &&
