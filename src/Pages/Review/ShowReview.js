@@ -4,7 +4,7 @@ import useReviews from '../../Hoocks/useReviews';
 const ShowReview = () => {
     const [reviews] = useReviews();
     return (
-        <div>
+        <div className='my-5 container'>
             <h3 className='text-center mt-3'>What Our Customer says About Us</h3>
             <div className="row row-cols-1 row-cols-md-6 g-4">
                 {
@@ -14,7 +14,7 @@ const ShowReview = () => {
 
                                 <div className="card-body text-center">
 
-                                    <h5 className="card-title">{review.name}</h5>
+                                    <h5 className="card-title text-primary">{review.name}</h5>
                                     <p className="card-title text-muted">{review.comments}</p>
 
                                 </div>

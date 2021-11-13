@@ -7,7 +7,7 @@ const Review = () => {
     const { register, handleSubmit } = useForm();
     const { user } = useFirebase();
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/addReview", {
+        fetch("https://pacific-caverns-05949.herokuapp.com/addReview", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -16,13 +16,14 @@ const Review = () => {
             .then((result) => console.log(result));
 
         console.log(data);
+        alert('Review Posted')
     };
     return (
-        <div>
+        <div className='text-center '>
             <h1>Review</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
-                    className="input-field"
+                    className="input-field w-50 my-1"
                     name="email"
                     value={user?.email}
                     type="email"
@@ -30,7 +31,7 @@ const Review = () => {
                 />
                 <br />
                 <input
-                    className="input-field"
+                    className="input-field w-50 my-1"
                     name="name"
                     value={user?.name}
                     placeholder="name"
@@ -39,7 +40,7 @@ const Review = () => {
                 />
                 <br />
                 <input
-                    className="input-field"
+                    className="input-field w-50 my-1"
                     name="comments"
                     placeholder="Comments"
                     {...register("comments", { required: true })}
