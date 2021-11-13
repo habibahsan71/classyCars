@@ -30,7 +30,7 @@ const PlaceOrder = () => {
 
 
     useEffect(() => {
-        fetch('https://hbk-supercars.web.app/services')
+        fetch('https://pacific-caverns-05949.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setService(data));
 
@@ -58,7 +58,7 @@ const PlaceOrder = () => {
             setError(`Number Please`);
         }
         else {
-            axios.post('https://hbk-supercars.web.app/AllOrder', orderData)
+            axios.post('https://pacific-caverns-05949.herokuapp.com/AllOrder', orderData)
                 .then(res => {
                     console.log(res);
                     alert('Order Placed')

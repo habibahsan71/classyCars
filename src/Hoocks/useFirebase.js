@@ -82,7 +82,7 @@ const useFirebase = () => {
     }
 
     const hanldeUserInfoRegister = (email) => {
-        fetch("https://hbk-supercars.web.app/addUserInfo", {
+        fetch("https://pacific-caverns-05949.herokuapp.com/addUserInfo", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ email }),

@@ -18,7 +18,7 @@ const MyOrder = () => {
     };
 
     useEffect(() => {
-        fetch('https://hbk-supercars.web.app/AllOrder')
+        fetch('https://pacific-caverns-05949.herokuapp.com/AllOrder')
             .then((res) => res.json())
             .then((data) => setMyOrder(data));
     }, [user]);
@@ -30,7 +30,7 @@ const MyOrder = () => {
 
     //Delete User 
     const handleDeleteOrder = id => {
-        const url = `https://hbk-supercars.web.app/AllOrder/${orderId}`;
+        const url = `https://pacific-caverns-05949.herokuapp.com/AllOrder/${orderId}`;
         fetch(url, {
             method: 'DELETE'
         })

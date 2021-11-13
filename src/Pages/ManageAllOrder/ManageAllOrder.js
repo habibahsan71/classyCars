@@ -26,7 +26,7 @@ const ManageAllOrder = () => {
 
 
     // useEffect(() => {
-    //     fetch(`https://hbk-supercars.web.app/AllOrder`)
+    //     fetch(`https://pacific-caverns-05949.herokuapp.com/AllOrder`)
     //         .then((res) => res.json())
     //         .then((data) => setAllOrder(data));
 
@@ -36,7 +36,7 @@ const ManageAllOrder = () => {
 
     //Delete User 
     const handleDeleteOrder = () => {
-        const url = `https://hbk-supercars.web.app/AllOrder/${orderId}`;
+        const url = `https://pacific-caverns-05949.herokuapp.com/AllOrder/${orderId}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -52,7 +52,7 @@ const ManageAllOrder = () => {
     }
 
     const handleUpdateStatus = (id) => {
-        const url = `https://hbk-supercars.web.app/AllOrder/${id}`
+        const url = `https://pacific-caverns-05949.herokuapp.com/AllOrder/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

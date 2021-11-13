@@ -47,7 +47,7 @@ const AddService = () => {
             setError(`you can't submit an empty from`)
         }
         else {
-            axios.post('https://hbk-supercars.web.app/services', data)
+            axios.post('https://pacific-caverns-05949.herokuapp.com/services', data)
                 .then(res => {
                     // console.log(res);
                     alert('Service added');
